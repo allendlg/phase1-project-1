@@ -2,19 +2,8 @@ const fox_btn = document.getElementById('fox_btn');
 const cat_btn = document.getElementById('cat_btn');
 const fox_result = document.getElementById('fox_result');
 const cat_result = document.getElementById('cat_result');
-let innerCursor = document.querySelector(".inner-cursor");
-let outerCursor = document.querySelector('.outer-cursor');
+let mouseCursor = document.querySelector(".cursor");
 
-document.addEventListener('mousemove', moveCursor);
-function moveCursor(e){
-    let x = e.clientX;
-    let y = e.clentY;
-    //console.log(x,y)
-innerCursor.index.left = `${x}`;
-innerCursor.index.top =`${y}`;
-outerCursor.index.left = `${x}`;
-outerCursor.index.top =`${y}`;
-}
 
 fox_btn.addEventListener('click', getRandomFox);
 cat_btn.addEventListener('click', getRandomCat);
@@ -39,3 +28,14 @@ function getRandomCat() {
 			}
 		});
 }
+ //Grabing classes
+let cursor = document.querySelector(".cursor");
+
+window.addEventListener("mousemove", animation);
+
+function animation (e){
+	cursor.style.top = e.pageY +20 + "px";
+	cursor.style.left = e.pageX + 35 + "px";
+  };
+
+
