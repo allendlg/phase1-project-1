@@ -7,6 +7,7 @@ let mouseCursor = document.querySelector(".cursor");
 
 fox_btn.addEventListener('click', getRandomFox);
 cat_btn.addEventListener('click', getRandomCat);
+fox_btn.addEventListener('click', getRandomFox)
 
 function getRandomFox() {
 	fetch('https://randomfox.ca/floof/')
@@ -17,17 +18,14 @@ function getRandomFox() {
 }
 
 function getRandomCat() {
-	fetch('https://aws.random.cat/meow')
+	fetch('https://aws.random.cat/meow' )
 		.then(res => res.json())
 		.then(data => {
-			if(data.url.includes('.mp4')) {
-				getRandomCat();
-			}
-			else {
+
 				cat_result.innerHTML = `<img src=${data.file} alt="cat" />`;
-			}
-		});
-}
+			})
+		};
+
  //Grabing classes
 let cursor = document.querySelector(".cursor");
 
