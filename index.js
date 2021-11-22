@@ -6,7 +6,7 @@ let mouseCursor = document.querySelector(".cursor");
 
 fox_btn.addEventListener("mouseenter", function(event) {
 	// highlight the mouseenter target
-	event.target.style.color = "purple";
+	event.target.style.color = "grey";
   
 	// reset the color after a short delay
 	setTimeout(function() {
@@ -28,7 +28,7 @@ fox_btn.addEventListener("mouseenter", function(event) {
 
   cat_btn.addEventListener("mouseenter", function(event) {
 	// highlight the mouseenter target
-	event.target.style.color = "purple";
+	event.target.style.color = "grey";
   
 	// reset the color after a short delay
 	setTimeout(function() {
@@ -63,7 +63,7 @@ function getRandomCat() {
 	fetch('https://random.dog/woof.json')
 		.then(res => res.json())
 		.then(data => {
-			cat_result.innerHTML = `<img src=${data.url} alt="cat" />`
+			cat_result.innerHTML = `<img src=${data.url} alt="dog" />`
 		});
 }
 
